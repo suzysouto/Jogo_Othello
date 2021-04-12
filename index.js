@@ -15,11 +15,6 @@ app.use("/", (req, res) => {
   res.render("index.html");
 });
 
-// app.get('/', (req, res) => {
-//   console.log(`[GET]: /`)
-//   res.sendFile(__dirname + '/public/index.html');
-// });
-
 var chatUsers = {}
 var tabuleiro = createMatrix()
 var coresDisponiveis = ["branco", "preto"]
@@ -98,7 +93,6 @@ server.listen(3000, () => {
 });
 
 function createMatrix(){
-  console.log(`[funcao] createMatrix`)
   var tabuleiro = []
   for(i = 1; i <= 8; i++){
     tabuleiro[i] = new Array();
@@ -112,6 +106,6 @@ function createMatrix(){
   tabuleiro[5][4] = 'preto';
   tabuleiro[5][5] = 'branco';
 
-  console.log(`criou o tabuleiro`)
+  console.log(`O tabuleiro foi criado com sucesso!`)
   return tabuleiro;
 }

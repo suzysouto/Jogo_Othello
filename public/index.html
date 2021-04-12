@@ -320,17 +320,15 @@
     socket.on("cor", cor => {
       corDoJogador = cor
       if (cor == "preto"){
-        console.log(`desabilita botao: branco`)
         document.getElementById("branco").innerHTML = "<button id = branco onclick='escolherCor(`branco`)' disabled>Branco</button>"
       }else{
-        console.log(`desabilita botao: preto`)
         document.getElementById("preto").innerHTML = "<button id = preto onclick='escolherCor(`preto`)' disabled>Preto</button>"
       }
     })
 
     socket.on("turno", newTurno => {
       turno = newTurno
-      document.getElementById("atualJogador").innerHTML = `<div id="atualJogador" class="plcenter">jogador ${turno}</div>`
+      document.getElementById("atualJogador").innerHTML = `<div id="atualJogador" class="plcenter">Jogador ${turno}</div>`
       render(tabuleiro)
     })
 
